@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+	<short>perlur-mailserver</short>
+	<description>This firewalld mailserver service template provides standardized mailserver firewalld rules deployed accross entire server estate.</description>
+	<port protocol="tcp" port="25"/> <!-- postfix SMTP TLS/SSL receive -->
+	<port protocol="tcp" port="465"/> <!-- postfix SMTP TLS/SSL relay -->
+	<port protocol="tcp" port="587"/> <!-- postfix SMTP TLS/SSL relay -->
+	<port protocol="tcp" port="993"/> <!-- IMAP TLS/SSL -->
+</service>
