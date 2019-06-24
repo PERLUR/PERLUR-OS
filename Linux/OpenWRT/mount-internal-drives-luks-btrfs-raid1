@@ -1,0 +1,11 @@
+#!/bin/bash
+
+diska="sda"
+diskb="sdb"
+
+cryptsetup open /dev/$diska crypt-$diska
+cryptsetup open /dev/$diskb crypt-$diskb
+
+if ! mount /dev/mapper/crypt-sda /mnt/int_drive_01/; then
+  mount /dev/mapper/crypt-sdb /mnt/int_drive_01/
+fi
